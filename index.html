@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness.AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FITNESS.AI</h1>
+            <p>Your Recommended Workouts</p>
+        </div>
+
+        <form id="recommendation-form">
+            <div class="input-container">
+                <div class="input-group">
+                    <label for="age">AGE</label>
+                    <input type="number" id="age" name="age" value="30">
+                </div>
+                <div class="input-group">
+                    <label for="weight">WEIGHT</label>
+                    <input type="number" id="weight" name="weight" value="70">
+                </div>
+            </div>
+            
+            <button type="submit" id="recommend-btn">GET RECOMMENDATIONS</button>
+        </form>
+
+        <div class="results-container">
+            <div class="section" id="cardio-section">
+                <h2>CARDIO</h2>
+                <ul id="cardio-list"></ul>
+            </div>
+            
+            <div class="section" id="strength-section">
+                <h2>STRENGTH</h2>
+                <ul id="strength-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
